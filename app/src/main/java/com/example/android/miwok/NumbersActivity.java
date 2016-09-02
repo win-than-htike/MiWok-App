@@ -28,22 +28,22 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        ArrayList<MiWok> words = new ArrayList<>();
+        ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new MiWok("တစ်","One"));
-        words.add(new MiWok("နှစ်","Two"));
-        words.add(new MiWok("သုံး","Three"));
-        words.add(new MiWok("လေး","Four"));
-        words.add(new MiWok("ငါး","Five"));
-        words.add(new MiWok("ခြောက်","Six"));
-        words.add(new MiWok("ခုနစ်","Seven"));
-        words.add(new MiWok("ရှစ်","Eight"));
-        words.add(new MiWok("ကိုး","Nine"));
-        words.add(new MiWok("တစ်ဆယ်","Ten"));
+        words.add(new Word("တစ်","One",R.drawable.one));
+        words.add(new Word("နှစ်","Two",R.drawable.two));
+        words.add(new Word("သုံး","Three",R.drawable.three));
+        words.add(new Word("လေး","Four",R.drawable.four));
+        words.add(new Word("ငါး","Five",R.drawable.five));
+        words.add(new Word("ခြောက်","Six",R.drawable.six));
+        words.add(new Word("ခုနစ်","Seven",R.drawable.seven));
+        words.add(new Word("ရှစ်","Eight",R.drawable.eight));
+        words.add(new Word("ကိုး","Nine",R.drawable.nine));
+        words.add(new Word("တစ်ဆယ်","Ten",R.drawable.ten));
 
         ListView listView = (ListView)findViewById(R.id.list);
 
-        MiWokAdapter mAdapter = new MiWokAdapter(this,words);
+        WordAdapter mAdapter = new WordAdapter(this,words,R.color.category_numbers);
 
         listView.setAdapter(mAdapter);
 

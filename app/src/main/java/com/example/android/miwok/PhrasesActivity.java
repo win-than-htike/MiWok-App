@@ -17,6 +17,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
@@ -24,5 +27,25 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
+
+        ArrayList<Word> pharseList = new ArrayList<>();
+
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+        pharseList.add(new Word("Hello","Hello"));
+
+        ListView pListView = (ListView) findViewById(R.id.pharse_list);
+
+        WordAdapter mPharseAdapter = new WordAdapter(this,pharseList,R.color.category_phrases);
+
+        pListView.setAdapter(mPharseAdapter);
+
     }
 }
